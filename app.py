@@ -19,7 +19,8 @@ st.write("Enter your health details to get a prediction. This is a project demo,
 # ===============================
 @st.cache_resource
 def load_model():
-return joblib.load("diabetes_xgb_pipeline.joblib")
+    return joblib.load("diabetes_xgb_pipeline.joblib")
+
 
 pipe = load_model()
 
@@ -101,3 +102,4 @@ with st.expander("Show my input values"):
 st.dataframe(user_df, use_container_width=True)
 
 st.caption("Disclaimer: This is a student ML project and not a medical diagnosis tool.")
+
